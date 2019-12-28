@@ -12,14 +12,14 @@ color = [WHITE for _ in range(N + 1)]
 # make adjacency list
 for _ in range(M):
     from_vertex, to_vertex = list(map(int, input().split()))
-graph[from_vertex].append({
-    "to_vertex": to_vertex,
-    "weight": 0
-})
-graph[to_vertex].append({
-    "to_vertex": from_vertex,
-    "weight": 0
-})
+    graph[from_vertex].append({
+        "to_vertex": to_vertex,
+        "weight": 0
+    })
+    graph[to_vertex].append({
+        "to_vertex": from_vertex,
+        "weight": 0
+    })
 
 
 # DFS
