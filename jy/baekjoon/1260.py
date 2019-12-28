@@ -14,7 +14,7 @@ for i in range(m):
 stack = [v]
 dfs = []
 
-while len(dfs) < len(graph):
+while stack:
     this = stack.pop()
 
     if this not in dfs:
@@ -26,18 +26,14 @@ while len(dfs) < len(graph):
 print(' '.join([str(i) for i in dfs]))
 
 #bfs
-import queue
-q = queue.Queue()
-q.put(v)
-bfs = []
+q = [v]
+bfs = [v]
 
-while len(bfs) < len(graph):
-    this = q.get()
-    
-    if this not in bfs:
-        bfs.append(this)
+while q:
+    this = q.pop(0)
 
     for i in sorted(graph[this]):
         if i not in bfs:
-            q.put(i)
+            q.append(i)
+            bfs.append(i)
 print(' '.join([str(i) for i in bfs]))
