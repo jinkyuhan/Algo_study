@@ -1,15 +1,5 @@
-import sys
-
-k = int(input())
-a = list(map(int, [sys.stdin.readline() for i in range(k)]))
-
-stack = []
-for i in a:
-    if i != 0:
-        stack.append(i)
-    else:
-        stack.pop()
-
-print(sum(stack))
-
-        
+s = []
+for _ in range(int(input())):
+    i = int(input())
+    s.append(i) if i else s.pop()       
+print(sum(s))
