@@ -1,4 +1,5 @@
 import heapq
+import sys
 taken = None  # for prevent cycles
 q = []
 
@@ -17,7 +18,7 @@ if __name__ == "__main__":
     # build an adjacency list
     adj = [[] for _ in range(n+1)]
     for _ in range(m):
-        v1, v2, w = map(int, input().split())
+        v1, v2, w = map(int, sys.stdin.readline().split())
         adj[v1].append([w, v2])
         adj[v2].append([w, v1])
 
