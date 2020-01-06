@@ -12,7 +12,6 @@ def prim(s):
 
     while q:
         wi, vi = heapq.heappop(q)
-        # print('wi, vi', wi, vi)
         if visited[vi-1] == 0:
             visited[vi-1] = 1
             sum += wi
@@ -34,8 +33,8 @@ if __name__ == "__main__":
         adj[v2].append([w, v1])
 
     # print('adj')
-    for i in adj:
-        print(i)
+    # for i in adj:
+    #     print(i)
 
     # Prim's algorithm
     print(prim(1))
