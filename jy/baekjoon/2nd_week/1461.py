@@ -9,7 +9,7 @@ def g(li, m):
     if o == 0:
         return sum(li[m - 1::m]) * 2
     else:
-        return min(sum(li[o - 1::m]), (sum(li[m - 1::m]) + li[-1])) * 2
+        return sum(li[o - 1::m]) * 2
 
 
 n, m = map(int, sys.stdin.readline().split())
