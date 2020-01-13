@@ -1,12 +1,10 @@
 import sys
-from math import exp
 
 N = int(sys.stdin.readline())
 words = sys.stdin.readline().split()[0]
 expert = ""
 beginner = ""
 count_alp = [0 for _ in range(26)]
-
 for char in words:
     index = ord(char) - 97
     count_alp[index] = count_alp[index] + 1
