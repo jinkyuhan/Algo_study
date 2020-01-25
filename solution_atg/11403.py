@@ -32,3 +32,7 @@ for row in range(N):
     for col in result_list[row]:
         print(col,end=' ')
     print()
+
+    
+    ######color 이차원 배열로 할 필요 없이 반복문 돌릴때 갱신하면 되고 
+    count 변수 역시 필요가 없다
