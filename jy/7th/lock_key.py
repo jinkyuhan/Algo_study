@@ -43,7 +43,7 @@ def solution(key, lock):
         for x, y in trans_list:
             expanded_key = expand_key(key, len(lock), x, y)
             if match_key_lock(expanded_key, lock) is True:
-                return True
+                return True 
         key = rotate_key(key)
 
     return False
