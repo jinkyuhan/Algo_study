@@ -7,7 +7,9 @@ def bfs(current_pos,final_pos,dir,l,visited):
         current_level=current_pos[1]
         current_x=current_pos[0][0]
         current_y=current_pos[0][1]
-        # visited[current_x][current_y]=True
+
+        # visited[current_x][current_y]=True        
+
         # print(current_pos)
         if current_x==final_pos[0] and current_y==final_pos[1]:
             return current_level
