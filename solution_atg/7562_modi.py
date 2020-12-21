@@ -7,7 +7,7 @@ def bfs(current_pos,final_pos,dir,l,visited):
         current_level=current_pos[1]
         current_x=current_pos[0][0]
         current_y=current_pos[0][1]
-        visited[current_x][current_y]=True
+        # visited[current_x][current_y]=True
         # print(current_pos)
         if current_x==final_pos[0] and current_y==final_pos[1]:
             return current_level
@@ -22,19 +22,18 @@ def bfs(current_pos,final_pos,dir,l,visited):
             if visited[next_x][next_y]==False:
                 next_pos=[next_x,next_y]
                 queue.append([next_pos,current_level])
+                visited[next_x][next_y]=True
                 
                 
 if __name__ == "__main__":
     test_case=int(input())
-    result=[]
+
     dir=[[-2,1],[-1,2],[-2,-1],[-1,-2],[1,2],[2,1],[1,-2],[2,-1]]
         
     for _ in range(test_case):
         l=int(input())
         current_pos=list(map(int,input().split()))
         final_pos=list(map(int,input().split()))
-        visited=[[False for _ in range(l)]for _ in range(l)]        
-        result.append(bfs(current_pos,final_pos,dir,l,visited))
+        visited=[[False]*l for _ in range(l)]        
+        print(bfs(current_pos,final_pos,dir,l,visited))
         
-for i in range(test_case):
-    print(result[i])
